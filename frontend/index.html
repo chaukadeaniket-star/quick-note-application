@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Note Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📝 Quick Notes</h1>
+            <p>Capture your thoughts and organize your ideas.</p>
+        </header>
+
+        <section class="note-form">
+            <h2>Create a New Note</h2>
+
+            <form id="noteForm">
+                <label for="title">Note Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter note title..."
+                    required
+                >
+
+                <label for="content">Note Content</label>
+                <textarea
+                    id="content"
+                    rows="5"
+                    placeholder="Write your note here..."
+                    required
+                ></textarea>
+
+                <button type="submit" id="submitButton">
+                    + Add Note
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelEdit"
+                    class="cancel-button hidden"
+                >
+                    Cancel Edit
+                </button>
+            </form>
+
+            <p id="message" role="status"></p>
+        </section>
+
+        <section class="notes-section">
+            <div class="notes-heading">
+                <h2>My Notes</h2>
+                <span id="noteCount">0 notes</span>
+            </div>
+
+            <div id="notesContainer" class="notes-grid">
+                <p class="loading">Loading your notes...</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Quick Notes — Keep your ideas organized.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
